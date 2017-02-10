@@ -1,0 +1,537 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="svcMain" targetNamespace="http://services/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://services/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://services/" version="1.0" xmlns:tns="http://services/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="adjrec_LargeQueryWithResponse" type="tns:adjrec_LargeQueryWithResponse"/>
+<xs:element name="adjrec_LargeQueryWithResponseResponse" type="tns:adjrec_LargeQueryWithResponseResponse"/>
+<xs:element name="call_Proc" type="tns:call_Proc"/>
+<xs:element name="call_ProcResponse" type="tns:call_ProcResponse"/>
+<xs:element name="copy_Report_Templates" type="tns:copy_Report_Templates"/>
+<xs:element name="copy_Report_TemplatesResponse" type="tns:copy_Report_TemplatesResponse"/>
+<xs:element name="genDocDetailsProcessFiles" type="tns:genDocDetailsProcessFiles"/>
+<xs:element name="genDocDetailsProcessFilesResponse" type="tns:genDocDetailsProcessFilesResponse"/>
+<xs:element name="genDocHeadersProcessFiles" type="tns:genDocHeadersProcessFiles"/>
+<xs:element name="genDocHeadersProcessFilesResponse" type="tns:genDocHeadersProcessFilesResponse"/>
+<xs:element name="genInternalProcessFiles" type="tns:genInternalProcessFiles"/>
+<xs:element name="genInternalProcessFilesResponse" type="tns:genInternalProcessFilesResponse"/>
+<xs:element name="generateKML" type="tns:generateKML"/>
+<xs:element name="generateKMLResponse" type="tns:generateKMLResponse"/>
+<xs:element name="get_Report" type="tns:get_Report"/>
+<xs:element name="get_ReportResponse" type="tns:get_ReportResponse"/>
+<xs:element name="qryrec_MobileDataZIP" type="tns:qryrec_MobileDataZIP"/>
+<xs:element name="qryrec_MobileDataZIPResponse" type="tns:qryrec_MobileDataZIPResponse"/>
+<xs:element name="qryrec_View" type="tns:qryrec_View"/>
+<xs:element name="qryrec_ViewResponse" type="tns:qryrec_ViewResponse"/>
+<xs:element name="qryrec_status" type="tns:qryrec_status"/>
+<xs:element name="qryrec_statusResponse" type="tns:qryrec_statusResponse"/>
+<xs:element name="qryrec_table" type="tns:qryrec_table"/>
+<xs:element name="qryrec_tableResponse" type="tns:qryrec_tableResponse"/>
+<xs:element name="setLog" type="tns:setLog"/>
+<xs:element name="setLogResponse" type="tns:setLogResponse"/>
+<xs:element name="unzipAndWrite" type="tns:unzipAndWrite"/>
+<xs:element name="unzipAndWriteResponse" type="tns:unzipAndWriteResponse"/>
+<xs:complexType name="qryrec_table">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QUERY" type="xs:string"/>
+      <xs:element name="use_code" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="qryrec_tableResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="copy_Report_Templates">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cmpCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="copy_Report_TemplatesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="get_Report">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COLUMNS_LIST" type="xs:string"/>
+      <xs:element minOccurs="0" name="VIEW_NAME" type="xs:string"/>
+      <xs:element minOccurs="0" name="WHERE_CLAUSE" type="xs:string"/>
+      <xs:element minOccurs="0" name="LIMIT_CLAUSE" type="xs:string"/>
+      <xs:element minOccurs="0" name="ORDER_BY" type="xs:string"/>
+      <xs:element name="use_code" type="xs:int"/>
+      <xs:element minOccurs="0" name="REPORT_ID" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="get_ReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="genDocHeadersProcessFiles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PRC_CODE" type="xs:string"/>
+      <xs:element name="use_code" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="genDocHeadersProcessFilesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="qryrec_MobileDataZIP">
+    <xs:sequence>
+      <xs:element name="use_code" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="qryrec_MobileDataZIPResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="genInternalProcessFiles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REH_CODE" type="xs:string"/>
+      <xs:element name="use_code" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="genInternalProcessFilesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="setLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element name="arg1" type="xs:int"/>
+      <xs:element name="arg2" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="setLogResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="qryrec_status">
+    <xs:sequence>
+      <xs:element name="use_code" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="qryrec_statusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="generateKML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PROC_NAME" type="xs:string"/>
+      <xs:element minOccurs="0" name="PARAMS_LIST" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="generateKMLResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="genDocDetailsProcessFiles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PRC_CODE" type="xs:string"/>
+      <xs:element name="use_code" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="genDocDetailsProcessFilesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="qryrec_View">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COLUMNS_LIST" type="xs:string"/>
+      <xs:element minOccurs="0" name="VIEW_NAME" type="xs:string"/>
+      <xs:element minOccurs="0" name="WHERE_CLAUSE" type="xs:string"/>
+      <xs:element minOccurs="0" name="LIMIT_CLAUSE" type="xs:string"/>
+      <xs:element minOccurs="0" name="ORDER_BY" type="xs:string"/>
+      <xs:element name="use_code" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="qryrec_ViewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="adjrec_LargeQueryWithResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="QUERY_ARRAY" type="tns:batchQuery"/>
+      <xs:element name="use_code" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="batchQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="query" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="adjrec_LargeQueryWithResponseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:response"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+      <xs:element name="result" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="call_Proc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PROC_NAME" type="xs:string"/>
+      <xs:element minOccurs="0" name="PARAMS_LIST" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="call_ProcResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="unzipAndWrite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="unzipAndWriteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="adjrec_LargeQueryWithResponse">
+    <wsdl:part element="tns:adjrec_LargeQueryWithResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="genDocDetailsProcessFilesResponse">
+    <wsdl:part element="tns:genDocDetailsProcessFilesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setLog">
+    <wsdl:part element="tns:setLog" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="qryrec_ViewResponse">
+    <wsdl:part element="tns:qryrec_ViewResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="copy_Report_Templates">
+    <wsdl:part element="tns:copy_Report_Templates" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unzipAndWriteResponse">
+    <wsdl:part element="tns:unzipAndWriteResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="copy_Report_TemplatesResponse">
+    <wsdl:part element="tns:copy_Report_TemplatesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="qryrec_MobileDataZIP">
+    <wsdl:part element="tns:qryrec_MobileDataZIP" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="qryrec_status">
+    <wsdl:part element="tns:qryrec_status" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="call_Proc">
+    <wsdl:part element="tns:call_Proc" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="get_ReportResponse">
+    <wsdl:part element="tns:get_ReportResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="qryrec_tableResponse">
+    <wsdl:part element="tns:qryrec_tableResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="get_Report">
+    <wsdl:part element="tns:get_Report" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setLogResponse">
+    <wsdl:part element="tns:setLogResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="genInternalProcessFilesResponse">
+    <wsdl:part element="tns:genInternalProcessFilesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unzipAndWrite">
+    <wsdl:part element="tns:unzipAndWrite" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateKMLResponse">
+    <wsdl:part element="tns:generateKMLResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="genDocHeadersProcessFiles">
+    <wsdl:part element="tns:genDocHeadersProcessFiles" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="call_ProcResponse">
+    <wsdl:part element="tns:call_ProcResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="genDocHeadersProcessFilesResponse">
+    <wsdl:part element="tns:genDocHeadersProcessFilesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="qryrec_statusResponse">
+    <wsdl:part element="tns:qryrec_statusResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="genInternalProcessFiles">
+    <wsdl:part element="tns:genInternalProcessFiles" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="qryrec_table">
+    <wsdl:part element="tns:qryrec_table" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateKML">
+    <wsdl:part element="tns:generateKML" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="qryrec_MobileDataZIPResponse">
+    <wsdl:part element="tns:qryrec_MobileDataZIPResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="qryrec_View">
+    <wsdl:part element="tns:qryrec_View" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="adjrec_LargeQueryWithResponseResponse">
+    <wsdl:part element="tns:adjrec_LargeQueryWithResponseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="genDocDetailsProcessFiles">
+    <wsdl:part element="tns:genDocDetailsProcessFiles" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="svcMain">
+    <wsdl:operation name="qryrec_table">
+      <wsdl:input message="tns:qryrec_table" name="qryrec_table">
+    </wsdl:input>
+      <wsdl:output message="tns:qryrec_tableResponse" name="qryrec_tableResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="copy_Report_Templates">
+      <wsdl:input message="tns:copy_Report_Templates" name="copy_Report_Templates">
+    </wsdl:input>
+      <wsdl:output message="tns:copy_Report_TemplatesResponse" name="copy_Report_TemplatesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_Report">
+      <wsdl:input message="tns:get_Report" name="get_Report">
+    </wsdl:input>
+      <wsdl:output message="tns:get_ReportResponse" name="get_ReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genDocHeadersProcessFiles">
+      <wsdl:input message="tns:genDocHeadersProcessFiles" name="genDocHeadersProcessFiles">
+    </wsdl:input>
+      <wsdl:output message="tns:genDocHeadersProcessFilesResponse" name="genDocHeadersProcessFilesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qryrec_MobileDataZIP">
+      <wsdl:input message="tns:qryrec_MobileDataZIP" name="qryrec_MobileDataZIP">
+    </wsdl:input>
+      <wsdl:output message="tns:qryrec_MobileDataZIPResponse" name="qryrec_MobileDataZIPResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genInternalProcessFiles">
+      <wsdl:input message="tns:genInternalProcessFiles" name="genInternalProcessFiles">
+    </wsdl:input>
+      <wsdl:output message="tns:genInternalProcessFilesResponse" name="genInternalProcessFilesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLog">
+      <wsdl:input message="tns:setLog" name="setLog">
+    </wsdl:input>
+      <wsdl:output message="tns:setLogResponse" name="setLogResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qryrec_status">
+      <wsdl:input message="tns:qryrec_status" name="qryrec_status">
+    </wsdl:input>
+      <wsdl:output message="tns:qryrec_statusResponse" name="qryrec_statusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateKML">
+      <wsdl:input message="tns:generateKML" name="generateKML">
+    </wsdl:input>
+      <wsdl:output message="tns:generateKMLResponse" name="generateKMLResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genDocDetailsProcessFiles">
+      <wsdl:input message="tns:genDocDetailsProcessFiles" name="genDocDetailsProcessFiles">
+    </wsdl:input>
+      <wsdl:output message="tns:genDocDetailsProcessFilesResponse" name="genDocDetailsProcessFilesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qryrec_View">
+      <wsdl:input message="tns:qryrec_View" name="qryrec_View">
+    </wsdl:input>
+      <wsdl:output message="tns:qryrec_ViewResponse" name="qryrec_ViewResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adjrec_LargeQueryWithResponse">
+      <wsdl:input message="tns:adjrec_LargeQueryWithResponse" name="adjrec_LargeQueryWithResponse">
+    </wsdl:input>
+      <wsdl:output message="tns:adjrec_LargeQueryWithResponseResponse" name="adjrec_LargeQueryWithResponseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="call_Proc">
+      <wsdl:input message="tns:call_Proc" name="call_Proc">
+    </wsdl:input>
+      <wsdl:output message="tns:call_ProcResponse" name="call_ProcResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unzipAndWrite">
+      <wsdl:input message="tns:unzipAndWrite" name="unzipAndWrite">
+    </wsdl:input>
+      <wsdl:output message="tns:unzipAndWriteResponse" name="unzipAndWriteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="svcMainSoapBinding" type="tns:svcMain">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="qryrec_table">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="qryrec_table">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="qryrec_tableResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="copy_Report_Templates">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="copy_Report_Templates">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="copy_Report_TemplatesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_Report">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="get_Report">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="get_ReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genDocHeadersProcessFiles">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="genDocHeadersProcessFiles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="genDocHeadersProcessFilesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genInternalProcessFiles">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="genInternalProcessFiles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="genInternalProcessFilesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qryrec_MobileDataZIP">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="qryrec_MobileDataZIP">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="qryrec_MobileDataZIPResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qryrec_status">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="qryrec_status">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="qryrec_statusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLog">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setLog">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setLogResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateKML">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="generateKML">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="generateKMLResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genDocDetailsProcessFiles">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="genDocDetailsProcessFiles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="genDocDetailsProcessFilesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qryrec_View">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="qryrec_View">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="qryrec_ViewResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adjrec_LargeQueryWithResponse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="adjrec_LargeQueryWithResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="adjrec_LargeQueryWithResponseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="call_Proc">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="call_Proc">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="call_ProcResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unzipAndWrite">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="unzipAndWrite">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="unzipAndWriteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="svcMain">
+    <wsdl:port binding="tns:svcMainSoapBinding" name="svcMainPort">
+      <soap:address location="http://195.82.7.166:1080/DSS_APP_SERVICES/svcMain"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

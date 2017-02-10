@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://195.82.7.166:1080/svcMain.wsdl" uri="src/conf/xml-resources/web-service-references/svcMain/wsdl/195.82.7.166_1080/svcMain.wsdl"/>
+    <system systemId="http://192.168.1.200:1080/svcMain.wsdl" uri="src/conf/xml-resources/web-service-references/svcMain/wsdl/192.168.1.200_1080/svcMain.wsdl"/>
+    <system systemId="http://192.168.1.200:1080/DSS_APP_SERVICES/svcMain?wsdl" uri="src/conf/xml-resources/web-service-references/svcMain/wsdl/192.168.1.200_1080/DSS_APP_SERVICES/svcMain.wsdl"/>
+</catalog>
